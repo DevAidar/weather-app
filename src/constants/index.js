@@ -1,0 +1,1 @@
+export const FETCH_WEATHER_BY_ZIP = 'FETCH_WEATHER_BY_ZIP';
