@@ -7,14 +7,16 @@ import Header from '../components/Header/Header';
 import Weather from '../components/Weather/Weather';
 
 const WeatherSearch = (props) => {
-  props.fetchWeatherByZip(90001);
+  !props.weatherData && props.fetchWeatherByZip(90001);
 
   return (
     <>
       <Header />
       {props.weatherData
-        ? <Weather />
-        : null
+        ? props.weatherData.status === 200
+          ? <Weather />
+          : <h1>404 Page Not Found</h1>
+        : <h2>Loading . . .</h2>
       }
       <div className='container'>
         <div className='container_footer'>
