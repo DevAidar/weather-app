@@ -72,7 +72,6 @@ const Weather = (props) => {
   return props.weatherData ? (
     <>
       <div className='weather_card__today'>
-        {console.log(props.weatherData.data)}
         <div className='weather_card__today__main'>
           <p className='weather_card__today__city'>{`${props.weatherData.data.city.name} Weather`}</p>
           <p className='weather_card__today__time'>{`as of ${getDateObject(0).getUTCHours() % 12 === 0 ? '12' : getDateObject(0).getUTCHours() % 12}:${props.weatherData.data.list[0].dt_txt.substr(14, 2)} ${getDateObject(0).getUTCHours() > 11 ? 'pm' : 'am'}`}</p>
