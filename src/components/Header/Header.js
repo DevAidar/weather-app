@@ -23,8 +23,8 @@ const Header = ({ children }) => {
       switch (searchType) {
         case searchTypes.ZIP:
         default:
-          history.push({
-            pathname: 'weather/zip',
+          history.replace({
+            pathname: '/weather-app/weather/zip',
             search: `?search=${search}`,
           });
           setSearch('');
