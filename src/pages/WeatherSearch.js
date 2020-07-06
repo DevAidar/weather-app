@@ -12,7 +12,10 @@ const WeatherSearch = (props) => {
   return (
     <>
       <Header />
-      {props.weatherData && <Weather />}
+      {props.weatherData
+        ? <Weather />
+        : null
+      }
       <div className='container'>
         <div className='container_footer'>
           <span className='container_footer_arrow'>

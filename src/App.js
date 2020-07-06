@@ -13,7 +13,7 @@ const App = () => (
       <Route exact path='/'>
         <Redirect to='/weather-app/' />
       </Route>
-      <Route exact path='/weather-app'>
+      <Route exact path='/weather-app/'>
         <WeatherSearch />
       </Route>
       <Route path='/weather-app/weather/zip'>
