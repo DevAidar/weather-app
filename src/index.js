@@ -6,20 +6,20 @@ import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 
 import App from './App';
-import reducer from './reducers';
+import rootReducer from './reducers';
 
 import './index.css';
 
 
 const store = createStore(
-  reducer, 
+  rootReducer,
   applyMiddleware(thunk),
   // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
 );
-            
+
 
 ReactDOM.render(
-  <Provider store={ store }>
+  <Provider store={store}>
     <BrowserRouter>
       <React.StrictMode>
         <App />
